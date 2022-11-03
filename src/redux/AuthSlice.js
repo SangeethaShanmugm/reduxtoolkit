@@ -7,6 +7,8 @@ let initialState = {
   isSuccess: false,
   isLoading: false,
   message: "",
+  role:"",
+  isLogout: false
 };
 
 export const register = createAsyncThunk(
@@ -83,15 +85,18 @@ export let authSlice = createSlice({
       state.isLoading = true;
     });
     builder.addCase(signIn.fulfilled, (state, { payload }) => {
+      console.log(payload)
       state.isLoading = false;
       state.isSuccess = true;
       state.user = payload;
+      state.role = payload.role;
     });
     builder.addCase(signIn.rejected, (state, { payload }) => {
       state.isLoading = false;
       state.isError = true;
       state.message = payload;
       state.user = null;
+      state.isLogout=true;
     });
     builder.addCase(logOut.fulfilled, state => {
       state.user = null;

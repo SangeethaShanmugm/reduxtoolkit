@@ -5,8 +5,7 @@ import styled from "styled-components";
 import { logOut, reset } from "../../redux/AuthSlice";
 
 import style from "./header.module.css";
-const NavSection = styled.section`
-  
+const NavSection = styled.section` 
   
 `;
 const NavArticle = styled.article`
@@ -35,7 +34,7 @@ const AuthUl = styled.ul`
 const Navbar = () => {
   let dispatch = useDispatch();
   const navigate = useNavigate();
-  let { isLoading, isSuccess, isError, message, user } = useSelector(
+  let { isLoading, isSuccess, isError, message, user, isLogout } = useSelector(
     state => state.auth
   );
 
@@ -66,15 +65,13 @@ const Navbar = () => {
   let AnonymousUser = () => {
     return (
       <Fragment>
+        
         <li>
-          <a href="/">Home</a>
+          <Link to={isLogout ? "/logout" : "/login"}>{isLogout ? "Logout" : "Login"}</Link>
         </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/register">Register</Link>
-        </li>
+        {/* <li>
+          <Link to="/register">{isLogout ? "" : isLogout=== false ? "" : "Register"} </Link>
+        </li>         */}
       </Fragment>
     );
   };
@@ -82,7 +79,7 @@ const Navbar = () => {
   return (
     <NavSection>
       <NavArticle>
-        <LogoBlock className="logoBlock">Q-Talk</LogoBlock>
+        <LogoBlock className="logoBlock"></LogoBlock>
         <AuthBlock className="authBlock">
           <AuthUl className={style.authUl}>
             {user?.TOKEN ? <AuthUser /> : <AnonymousUser />}

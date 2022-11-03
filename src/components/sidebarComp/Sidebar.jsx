@@ -16,24 +16,15 @@ const Sidebar = ({children}) => {
     const[isOpen ,setIsOpen] = useState(false);
     const toggle = () => setIsOpen (!isOpen);
     const menuItem=[
-        {
-            path:"/",
-            name:"Home",
-            icon:<FaTh/>
-        },
+        
         {
             path:"/dashboard",
             name:"Dashboard",
             icon:<FaUserAlt/>
-        },
-        {
-            path:"/login",
-            name:"Signin",
-            icon:<FaRegChartBar/>
-        },
+        },        
         {
             path:"/register",
-            name:"Signup",
+            name:"Register",
             icon:<FaCommentAlt/>
         }
         

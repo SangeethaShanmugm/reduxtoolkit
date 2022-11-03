@@ -1,9 +1,13 @@
 import React from 'react';
+import Sidebar from "../components/sidebarComp/Sidebar";
+
 
 const Dashboard = () => {
     return (
         <div>
-            <h1>dashboard page</h1>
+           <Sidebar >
+           <h1>Dashboard</h1>
+           </Sidebar>
         </div>
     );
 };

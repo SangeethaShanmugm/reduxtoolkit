@@ -5,6 +5,7 @@ import Styles from "./auth.module.css";
 import { register, reset } from "../../redux/AuthSlice";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../../pages/Spinner";
+import Sidebar from "../sidebarComp/Sidebar";
 const Signup = () => {
   let dispatch = useDispatch();
   let navigate = useNavigate();
@@ -42,6 +43,8 @@ const Signup = () => {
     return <Spinner />;
   }
   return (
+    <>
+      <Sidebar >
     <section className={Styles.authBlock}>
       <article>
         <header>
@@ -128,6 +131,8 @@ const Signup = () => {
         </main>
       </article>
     </section>
+   </Sidebar>
+    </>
   );
 };
 
