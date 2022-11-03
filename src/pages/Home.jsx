@@ -9,8 +9,7 @@ const Home = () => {
 
 
   return(
-    <div>
-<Navigate replace to="/register" />    </div>
+    <h1>Welcome to Q-Talk </h1>
   );
 };
 

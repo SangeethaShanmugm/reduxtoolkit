@@ -6,8 +6,8 @@ import { logOut, reset } from "../../redux/AuthSlice";
 
 import style from "./header.module.css";
 const NavSection = styled.section`
-  background: #fff;
-  height: 70px;
+  
+  
 `;
 const NavArticle = styled.article`
   width: 100%;
@@ -15,11 +15,12 @@ const NavArticle = styled.article`
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  height: 70px;
+  ${'' /* height: 70px; */}
 `;
 const LogoBlock = styled.div`
-  flex-basis: 50%;
-  padding: 26px;
+  flex-basis: 200px;
+  padding: 5px;
+  font-size: 30px;
 `;
 const AuthBlock = styled.div`
   flex-basis: 50%;
