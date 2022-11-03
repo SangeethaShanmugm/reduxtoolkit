@@ -1,0 +1,62 @@
+.authBlock article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.authBlock article main {
+  background: #fff;
+  padding: 20px;
+  width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.authBlock article header {
+  background: transparent;
+  padding: 10px 0px 30px;
+}
+.authBlock article header h1 {
+  color:#3484cc ;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.authBlock article form label {
+  padding: 0px 0;
+  font-weight: bold;
+  width: 100%;
+  display: block;
+  color: #607d8bb8;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.authBlock article form input {
+  background: #efefef4a;
+  border: 1px solid #efefef;
+  padding: 10px;
+  border-radius: 2px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.authBlock article form button {
+  background: #3484cc;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 3px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+}
+.authBlock article form button:hover {
+  background-color: #555;
+}

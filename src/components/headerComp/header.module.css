@@ -1,0 +1,12 @@
+.authUl li a {
+  color: #fff;
+  font-weight: bold;
+  padding: 26px 15px;
+  text-decoration: none;
+  background-color: #111;
+  border-right: 1px solid #555;
+}
+
+.authUl li a:hover {
+  background-color: #555;
+}
